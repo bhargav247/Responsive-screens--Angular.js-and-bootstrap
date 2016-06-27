@@ -1,0 +1,27 @@
+[
+{
+	"supplier":"ABM",
+	"price":"2600",
+	"payment_terms":"Net 30",
+	"leadtime_to_fulfillment":"3 days",
+	"union_workforce":"Yes",
+	"prior_fulfilled_services":"one"
+},
+{
+	"supplier":"CRS Facility Services",
+	"price":"3500",
+	"payment_terms":"Net 30",
+	"leadtime_to_fulfillment":"3 days",
+	"union_workforce":"Yes",
+	"prior_fulfilled_services":"two"
+},
+{
+	"supplier":"GDI Integrated Facility Services",
+	"price":"3800",
+	"payment_terms":"Net 45",
+	"leadtime_to_fulfillment":"5 days",
+	"union_workforce":"Yes",
+	"prior_fulfilled_services":""
+}
+
+]
