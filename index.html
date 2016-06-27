@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc Health Clinic</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js">
+  	</script>
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  	
+</head>
+<body ng-app="myapp">
+	<header>
+		<div class="rows">
+			<div class="col-lg-4 col-md-4 col-xs-3">
+				<img src="images/logo.png">
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-3">
+			<div class="inner-addon right-addon">
+          <i class="glyphicon glyphicon-search"></i>
+          <input type="text" class="form-control search"/>
+        </div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-3 notification">
+				<img src="images/social.png"/>
+			</div>
+		</div>
+	</header>
+	<section>
+		<article>
+			<div class="container">
+				<h5 class="opacity path">Home/RFQS/RFQ312</h5>
+				<div class="rows">
+					<div class="col-lg-12 col-md-12 col-xs-12 main table-responsive">
+						<div class="col-lg-9 col-md-9 col-xs-12">
+							<h5 class="opacity RFQ124">RFQ124</h5>
+							<h3>Need to convert a lobby area into cubicles</h3>
+						</div>
+						<div class="col-lg-3 col-md-3 col-xs-12">
+							<h5 class="status opacity">Status</h5>
+							<div class="col-lg-3 col-md-3 col-xs-3">
+								<h5 class="open-link">Open:</h5>
+							</div>
+							<div class="col-lg-9 col-md-9 col-xs-12">
+								<h6>Will close in 3 days</h6>
+							</div>
+						 
+						</div>
+
+						<div class="col-lg-12 col-md-12 col-xs-12">
+							<hr>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+							<h5 class="opacity">Details description of what you need</h5>
+							
+							We already have new design for our workspace.
+							<a href="#">Design.pdf</a><br/>
+							<a href="#">Furniture.pdf</a>
+						</div>
+						<div class="col-lg-2 col-md-2 col-xs-12">
+							<h5 class="opacity">Respond In</h5>
+							1 week
+
+						</div>
+						<div class="col-lg-3 col-md-3 col-xs-12">
+							<h5 class="opacity">Site</h5>
+							Palo Alto - US
+						</div>
+						<div class="col-lg-3 col-md-3 col-xs-12">
+							<h5 class="opacity">Building</h5>
+							Building 3
+						</div>
+						
+						</div>
+						<div class="col-lg-12 col-md-12 col-xs-12">
+							<center>
+							<i class="fa fa-angle-down arrow opacity"></i>
+							<br/>
+							<h5 class="opacity more">Show more</h5>
+							</center>
+						</div>
+					
+					</div>
+					<div class="col-lg-12 col-md-12 col-xs-12 main" ng-controller="myctrl">
+						<div class="col-lg-12 col-md-12 col-xs-12">
+							<h4>Invited Suppliers</h4>
+							<h5 class="opacity">You've received 3 quotes from 3 invited suppliers</h5>
+						</div>
+						<div class="col-lg-12 col-md-12 col-xs-12">
+							<table class="table table-responsive">
+								<thead>
+								<tr>
+									<th></th><th ng-repeat="sup in suppliers">{{sup.supplier}} <br/>
+                                    <img src="images/loc.png" alt="HTML5 Icon" height="15px"> Palo Alto, CA</br>
+									<button type="button" class="btn btn-md award">Award</button>
+								</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<th class="opacity">Price</th><td ng-repeat="sup in suppliers">{{sup.price | currency}}</td>
+								</tr>
+								<tr>
+									<th class="opacity">Payment terms</th><td ng-repeat="sup in suppliers">{{sup.payment_terms}}</td>
+								</tr>
+								<tr>
+									<th class="opacity">Leadtime to fullfilment</th><td ng-repeat="sup in suppliers">{{sup.leadtime_to_fulfillment}}</td>
+								</tr>
+								<tr>
+									<th class="opacity">Union workforce</th><td ng-repeat="sup in suppliers">{{sup.union_workforce}}</td>
+								</tr>
+								<tr>
+									<th class="opacity">Prior fulfilled services</th><td ng-repeat="sup in suppliers"><img ng-src="./images/{{sup.prior_fulfilled_services || none}}.png"</td>
+
+								</tr>
+								
+
+								</tbody>
+							</table>		
+						</div>
+						
+					</div>
+					<div class="div1 rows">
+						  <div id="requests">
+       
+                           <div class="col-lg-12 col-md-12 col-xs-12 main table-responsive">
+						<div class="col-lg-9 col-md-9 col-xs-12">
+							
+							<h3>Suppliers that still need to respond</h3>
+						</div>
+						
+							
+							<table class="table">
+    
+                  <tr>
+                    <th>Supplier</th>
+                    <th>Questions and answers</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>Fujisu Technologies
+                      <br><img src="images/loc.png" alt="HTML5 Icon" height="15px"> Sunnyvale, CA</td>
+                    <td><img src="images/noti.jpg" alt="HTML5 Icon" height="35px"></td>
+                    <td><button type="button" class="btn btn-default">Default</button></td>
+                  </tr>
+     </table>
+						 
+</div>
+                              
+                          <!--- -->    
+        </div>
+					</div>
+					
+
+				</div>
+                
+				<div class="div2">
+                    
+                                        
+
+				</div>
+
+				<div class="div3">
+				</div>
+			</div>
+		</article>
+		<footer>
+		</footer>
+
+
+</body>
+</html>

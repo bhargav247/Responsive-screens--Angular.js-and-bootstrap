@@ -1,0 +1,74 @@
+body{
+  		margin: 0;
+  		padding: 0;
+  		background-color: lightgray;
+  		
+  	}
+  	header{
+  		background-color: #5F5F5F;
+  		height: 55px;
+  		padding: 5px;
+
+  	}
+  	.notification{
+  		text-align: center;
+
+  	}
+  	.notification img{
+  		height: 50px;
+  	}
+  	.inner-addon {
+  		position: relative;
+	}
+	.inner-addon .glyphicon {
+  		position: absolute;
+  		padding: 10px;
+  		pointer-events: none;
+	}
+	.right-addon .glyphicon { 
+		right: 0px;
+		color: #fff;
+	}
+	.search{
+		margin-top:5px; 
+		background-color: gray;
+		border-radius: 0px;
+		color: white;
+ 
+	}
+	.open-link{
+		color: green;
+		font-weight: 700;
+
+	}
+	.main{
+		background-color: white;
+		margin-top: 30px;
+	}
+	hr{
+		color: gray;
+		background-color: gray;
+	}
+	.award{
+		background-color: #1A76CF;
+		color: white;
+		border-radius: 0px;
+	}
+	.arrow{
+		font-size: 5em;
+		margin-bottom: 0;
+	}
+	.opacity{
+		opacity: 0.5;
+	}
+	.more{
+		margin-bottom: 0;
+	}
+	.RFQ124, .status{
+		font-weight: 700;
+	}
+	.path{
+		font-weight: 700;
+		margin-top: 20px;
+		margin-bottom: -20px;
+	}
